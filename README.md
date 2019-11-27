@@ -9,8 +9,8 @@
 |group|references|null: false, foreign_key: true|
 
 ### Association
-has_many :comments
-has_many :groups, through: :groupes_users
+* has_many :comments
+* has_many :groups, through: :groupes_users
 
 ## groups
 |Column|Type|Options|
@@ -19,8 +19,8 @@ has_many :groups, through: :groupes_users
 |user|references|null: false, foreign_key: true|
 
 ### Association
-has_many :comments
-has_many :users, through: :groupes_users
+* has_many :comments
+* has_many :users, through: :groupes_users
 
 ## messages
 |Column|Type|Options|
@@ -31,8 +31,8 @@ has_many :users, through: :groupes_users
 |group|references|null: false, foreign_key: true|
 
 ### Association
-belongs_to :users
-belongs_to :groups
+* belongs_to :users
+* belongs_to :groups
 
 ## groupes_users
 |Column|Type|Options|
@@ -41,32 +41,5 @@ belongs_to :groups
 |group|references|null: false, foreign_key: true|
 
 ### Association
-belongs_to :users
-belongs_to :groups
-
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* belongs_to :users
+* belongs_to :groups
