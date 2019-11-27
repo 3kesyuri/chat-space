@@ -34,7 +34,7 @@
 * belongs_to :users
 * belongs_to :groups
 
-## groupes_users
+## groups_users
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
