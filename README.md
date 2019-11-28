@@ -9,7 +9,7 @@
 
 ### Association
 * has_many :comments
-* has_many :groups, through: :groupes_users
+* has_many :groups, through: :groups_users
 
 ## groups
 |Column|Type|Options|
@@ -18,7 +18,7 @@
 
 ### Association
 * has_many :comments
-* has_many :users, through: :groupes_users
+* has_many :users, through: :groups_users
 
 ## messages
 |Column|Type|Options|
