@@ -29,8 +29,8 @@
 |group|references|null: false, foreign_key: true|
 
 ### Association
-* belongs_to :users
-* belongs_to :groups
+* belongs_to :user
+* belongs_to :group
 
 ## groups_users
 |Column|Type|Options|
@@ -39,5 +39,5 @@
 |group|references|null: false, foreign_key: true|
 
 ### Association
-* belongs_to :users
-* belongs_to :groups
+* belongs_to :user
+* belongs_to :group
