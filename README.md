@@ -15,7 +15,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
-|user|references|null: false, foreign_key: true|
 
 ### Association
 * has_many :comments
