@@ -6,7 +6,6 @@
 |name|string|null: false|
 |email|string|null: false|uniquw: true|
 |password|string|null: false|
-|group|references|null: false, foreign_key: true|
 
 ### Association
 * has_many :comments
