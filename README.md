@@ -23,8 +23,8 @@
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
-|image|string|null: false|
+|comment|text|
+|image|string|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
