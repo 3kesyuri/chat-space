@@ -1,0 +1,27 @@
+#sideBar
+  .userArea
+    .userArea__inner
+      %p.userArea__name
+        ユーザー名
+      %ul.userArea__btn
+        %li.userArea__btn--group
+          =link_to "#" do
+            = icon('far', 'edit', class: "btn__edit")
+        %li.userArea__btn--account
+          =link_to "#" do
+            = icon('fas', 'cog', class: "btn__cog")
+
+  .groupArea
+    .groupArea__box
+      =link_to "#" do
+        %p.groupArea__box--name
+          グループ名
+        %p.groupArea__box--messageInfo
+          投稿の有無
+
+    .groupArea__box
+      =link_to "#" do
+        %p.groupArea__box--name
+          グループ名
+        %p.groupArea__box--messageInfo
+          投稿の有無
