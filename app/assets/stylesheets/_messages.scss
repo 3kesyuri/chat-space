@@ -1,0 +1,188 @@
+/* layout all */
+* {
+  box-sizing: border-box;
+}
+
+/* variable */
+$color-white: #fff;
+$light-blue:  #38aef0;
+$light-gray: #999;
+
+/* layout sideBar */
+#sideBar {
+  width: 300px;
+  height: 100vh;
+  float: left;
+  color: $color-white;
+  background-color: #2f3e51;
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  .userArea{
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: #253141;
+
+    &__inner {
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      color: $color-white;
+
+      &--group {
+      margin-right: 5px;
+      }
+    }
+  }
+
+  .groupArea {
+    padding: 20px;
+ 
+    &__box {
+      margin: 0 0 40px;
+
+      &--name {
+        font-size: 15px;
+        margin:0 0 5px 0;
+      }
+
+      &--messageInfo {
+        font-size:11px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* layout chatMain */
+#chatMain {
+  width: calc(100% - 300px);
+  height: 100vh;
+  float: right;
+
+  a {
+    color: $light-blue;
+    text-decoration: none;
+  }
+
+  .groupInfo {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+  
+    &__nameArea {
+      margin: 35px 0 0;
+
+      &--group {
+        font-size: 20px;
+      }
+
+      &--user {
+        margin: 15px 0 0;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  
+    &__btnArea {
+      height: 40px;
+      margin: 28px 0 0;
+      border:1px solid $light-blue;
+  
+      &--edit {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .messageList{
+    height: calc(100% - 190px);
+    padding: 35px 40px;
+
+    &__box {
+      margin: 0 0 46px;
+
+      &--inner {
+        display: flex;
+      }
+
+      &--user {
+        color: #333;
+      }
+
+      &--time {
+         font-size: 12px;
+         color: $light-gray;
+      }
+
+      &--message {
+         margin: 12px 0 0;
+         font-size: 14px;
+         color: #434A54;
+      }
+    }
+  }
+
+  .messageForm{
+    height: 90px;
+    padding: 20px 40px 20px 50px;
+    background-color: #ddd;
+
+    &__typeArea {
+      display: flex;
+
+      &--inner {
+        width: 100%;
+        position: relative;
+      }
+
+      &--text {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        border-style: none;
+      }
+
+      &--label {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+      }
+
+      &--image {
+        display: none;
+      }
+
+      &--imageIco {
+        font-size: 1.3rem;
+      }
+
+      &--send {
+        width: 100px;
+        height: 50px;
+        margin: 0 0 0 15px;
+        text-align: center;
+        color: $color-white;
+        background-color: $light-blue;
+      }
+    }
+  }
+}

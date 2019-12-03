@@ -1,0 +1,38 @@
+#chatMain
+  .groupInfo
+    .groupInfo__nameArea
+      %p.groupInfo__nameArea--group
+        グループ名
+      %p.groupInfo__nameArea--user
+        ユーザー名
+    .groupInfo__btnArea
+      =link_to "#", class:"groupInfo__btnArea--edit" do
+        Edit
+
+  .messageList
+    .messageList__box
+      .messageList__box--inner
+        %p.messageList__box--user
+          ユーザー名
+        %p.messageList__box--time
+          2019/11/11/11:11
+      %p.messageList__box--message
+        投稿内容
+
+    .messageList__box
+      .messageList__box--inner
+        %p.messageList__box--user
+          ユーザー名
+        %p.messageList__box--time
+          2019/11/11/11:11
+      %p.messageList__box--message
+        投稿内容
+
+  .messageForm
+    %form{action: "#", method: "post", class: "messageForm__typeArea"}
+      .messageForm__typeArea--inner
+        %input{type: "text", name: "text", placeholder: "type a message", class: "messageForm__typeArea--text"}
+        %label{class: "messageForm__typeArea--label"}
+          = icon('fas', 'image', class: "messageForm__typeArea--imageIco")
+          %input{type: "file", name: "image", class: "messageForm__typeArea--image"}
+      %input{type: "submit", value: "send", class: "messageForm__typeArea--send"}
