@@ -2,13 +2,13 @@
   .userArea
     .userArea__inner
       %p.userArea__name
-        ユーザー名
+        =current_user.name
       %ul.userArea__btn
         %li.userArea__btn--group
           =link_to "#" do
             = icon('far', 'edit', class: "btn__edit")
         %li.userArea__btn--account
-          =link_to "#" do
+          =link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: "btn__cog")
 
   .groupArea
