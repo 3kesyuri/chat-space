@@ -5,23 +5,17 @@
         =current_user.name
       %ul.userArea__btn
         %li.userArea__btn--group
-          =link_to "#" do
+          =link_to new_group_path do
             = icon('far', 'edit', class: "btn__edit")
         %li.userArea__btn--account
           =link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: "btn__cog")
 
   .groupArea
-    .groupArea__box
-      =link_to "#" do
-        %p.groupArea__box--name
-          グループ名
-        %p.groupArea__box--messageInfo
-          投稿の有無
-
-    .groupArea__box
-      =link_to "#" do
-        %p.groupArea__box--name
-          グループ名
-        %p.groupArea__box--messageInfo
-          投稿の有無
+    - current_user.groups.each do |group|
+      .groupArea__box
+        =link_to group_messages_path(group) do
+          %p.groupArea__box--name
+            = group.name
+          %p.groupArea__box--messageInfo
+            投稿はまだありません
