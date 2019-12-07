@@ -3,8 +3,8 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|email|string|null: false|uniquw: true|
+|name|string|null: false|uniquw: true|index: true|
+|email|string|null: false|
 |password|string|null: false|
 
 ### Association
