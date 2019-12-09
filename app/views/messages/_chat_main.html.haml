@@ -29,10 +29,10 @@
         投稿内容
 
   .messageForm
-    %form{action: "#", method: "post", class: "messageForm__typeArea"}
+    = form_for [@group, @message], :html => {class: "messageForm__typeArea"} do |f|
       .messageForm__typeArea--inner
-        %input{type: "text", name: "text", placeholder: "type a message", class: "messageForm__typeArea--text"}
+        = f.text_field :comment, class: "messageForm__typeArea--text", placeholder: "type a message"
         %label{class: "messageForm__typeArea--label"}
           = icon('fas', 'image', class: "messageForm__typeArea--imageIco")
-          %input{type: "file", name: "image", class: "messageForm__typeArea--image"}
-      %input{type: "submit", value: "send", class: "messageForm__typeArea--send"}
+          = f.file_field :image, class: "messageForm__typeArea--image"
+      = f.submit class: "messageForm__typeArea--send", value: "send"
