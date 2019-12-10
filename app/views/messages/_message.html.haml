@@ -1,0 +1,12 @@
+.messageList__box
+  .messageList__box--inner
+    %p.messageList__box--user
+      = message.user.name
+    %p.messageList__box--time
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  %p.messageList__box--message
+    - if message.comment.present?
+      %p
+        = message.comment
+    - if message.image.present?
+      = image_tag message.image.url,class: "messageList__box--image"
