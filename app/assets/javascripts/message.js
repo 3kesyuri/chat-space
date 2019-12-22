@@ -59,12 +59,12 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messageList').append(html);
-      $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
-      $('#new_message')[0].reset();
-      
     })
     .fail(function(jqXHR, textStatus, errorThrown){
       alert('ファイルの取得に失敗しました。');
-    });
+    })
+    .always(function(){})
+    $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
+      $('#new_message')[0].reset();
   });
 });
