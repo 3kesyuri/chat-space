@@ -61,9 +61,6 @@ $(function(){
       $('.messageList').append(html);
       $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
       $('#new_message')[0].reset();
-      // $('.messageForm__typeArea--image').val('');
-      // $('.messageForm__typeArea--text').val('');
-      // $('.messageForm__typeArea--send').prop('disabled', false);
       
     })
     .fail(function(jqXHR, textStatus, errorThrown){
