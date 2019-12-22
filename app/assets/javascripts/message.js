@@ -60,17 +60,14 @@ $(function(){
       var html = buildHTML(data);
       $('.messageList').append(html);
       $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
-      $('.messageForm__typeArea--image').val('');
-      $('.messageForm__typeArea--text').val('');
-      $('.messageForm__typeArea--send').prop('disabled', false);
+      $('#new_message')[0].reset();
+      // $('.messageForm__typeArea--image').val('');
+      // $('.messageForm__typeArea--text').val('');
+      // $('.messageForm__typeArea--send').prop('disabled', false);
       
     })
     .fail(function(jqXHR, textStatus, errorThrown){
       alert('ファイルの取得に失敗しました。');
-                    console.log("ajax通信に失敗しました");
-                    console.log("jqXHR          : " + jqXHR.status); // HTTPステータスが取得
-                    console.log("textStatus     : " + textStatus);    // タイムアウト、パースエラー
-                    console.log("errorThrown    : " + errorThrown.message); // 例外情報
     });
   });
 });
