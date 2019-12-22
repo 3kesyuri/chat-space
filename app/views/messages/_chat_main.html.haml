@@ -7,7 +7,7 @@
         - @group.users.each do |user|
           = user.name
     .groupInfo__btnArea
-      =link_to edit_user_path(current_user), class: "groupInfo__btnArea--edit" do
+      =link_to edit_group_path(@group.id), class: "groupInfo__btnArea--edit" do
         Edit
 
   .messageList
