@@ -10,6 +10,7 @@
   float: left;
   color: $color-white;
   background-color: #2f3e51;
+  overflow: scroll;
 
   a {
     color: $color-white;
@@ -111,6 +112,7 @@
   .messageList{
     height: calc(100% - 190px);
     padding: 35px 40px;
+    overflow: scroll;
 
     &__box {
       margin: 0 0 46px;
