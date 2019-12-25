@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
     else
-      reder :new
+      render :new
     end
   end
 
