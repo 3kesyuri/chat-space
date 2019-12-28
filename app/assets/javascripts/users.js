@@ -1,5 +1,5 @@
 $(function(){
-  var userNameList = $('.js-add-user');
+  var userNameList = $('#user-search-result');
 
   function appendUserName(data) {
     var html =`
@@ -17,7 +17,7 @@ $(function(){
         <p class="chat-group-user__name">ユーザーが見つかりません</p>
       </div>
     `;
-    $("#user-search-result").append(html);
+    userNameList.append(html);
   }
 
   function addDeleteUser(name, id) {
@@ -45,7 +45,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(data){
-      $('#chat-group-users').empty();
+      $('#user-search-result').empty();
       if (data.length !== 0) {
         data.forEach(function(data){
           appendUserName(data);
