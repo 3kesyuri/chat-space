@@ -19,7 +19,7 @@ $(function(){
         $('.messageList').animate({scrollTop: $('.messageList')[0].scrollHeight});
         $("#new_message")[0].reset();
         $('.messageForm__typeArea--send').prop("disabled", false)
-    }
+      }
     })
     .fail(function(){
       alert('ファイルの取得に失敗しました。');
