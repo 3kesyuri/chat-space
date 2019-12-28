@@ -89,9 +89,10 @@ $(function(){
     .fail(function(){
       alert('ファイルの取得に失敗しました。');
     })
-    .always(function(){})
+    .always(function(){
     $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
       $('#new_message')[0].reset();
+    });
   });
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
