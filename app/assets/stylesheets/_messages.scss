@@ -92,6 +92,15 @@
         margin: 15px 0 0;
         font-size: 12px;
         color: #999;
+        display: flex;
+      }
+
+      &--list {
+        margin: 0 0 0 5px;
+
+        &:first-child{
+          margin-left: 0;;
+        }
       }
     }
   
@@ -126,19 +135,20 @@
       }
 
       &--time {
-         font-size: 12px;
-         color: $light-gray;
+        margin: 0 0 0 5px;
+        font-size: 12px;
+        color: $light-gray;
       }
 
       &--message {
-         margin: 12px 0 0;
-         font-size: 14px;
-         color: #434A54;
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: #434A54;
       }
 
       &--image {
-          width: 100px;
-          height: 100px;
+        width: 100px;
+        height: 100px;
       }
     }
   }

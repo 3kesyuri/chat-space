@@ -87,7 +87,7 @@ $(function(){
       $('.messageList').append(html);
     })
     .fail(function(){
-      alert('ファイルの取得に失敗しました。');
+      alert('メッセージを入力してください');
     })
     .always(function(){
     $('.messageList').animate({ scrollTop: $('.messageList')[0].scrollHeight});
