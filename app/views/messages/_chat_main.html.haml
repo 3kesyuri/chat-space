@@ -3,9 +3,10 @@
     .groupInfo__nameArea
       %p.groupInfo__nameArea--group
         = @group.name
-      %p.groupInfo__nameArea--user
+      %ul.groupInfo__nameArea--user
         - @group.users.each do |user|
-          = user.name
+          %li.groupInfo__nameArea--list
+            = user.name
     .groupInfo__btnArea
       =link_to edit_group_path(@group.id), class: "groupInfo__btnArea--edit" do
         Edit
